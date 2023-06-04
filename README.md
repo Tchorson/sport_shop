@@ -1,2 +1,3 @@
 # sport_shop
-A simple online sport shop
+
+A simple sport shop service
