@@ -1,0 +1,30 @@
+plugins {
+	id 'java'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.shops'
+version = '1.0'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.7.12'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.7.12'
+	compileOnly 'org.projectlombok:lombok:1.18.28'
+	annotationProcessor 'org.projectlombok:lombok:1.18.28'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.12'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
